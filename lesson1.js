@@ -128,11 +128,15 @@ const users=[
       "name": "Trujillo Hogan"
     }
   ]
-
-
-  
   function randGroup() {
     const bloodGroups = ['1', '2','3', '4', '!1', '!2','!3', '!4'];
     let index = Math.floor(Math.random()*7);
     return bloodGroups[index]; 
  }
+ patients.forEach(iteam=>{
+    iteam.needs=randGroup()
+ })
+     
+users.forEach(iteam=>{
+   iteam.bloodGroup=randGroup()
+})
